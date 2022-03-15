@@ -1,5 +1,5 @@
 import math
-class kpc():
+class kpxy():
     """
     Converts between an X-Y coordinate system and a Keypad coordinate system.
 
@@ -130,8 +130,3 @@ class kpc():
             loc_x += interval_x * (3 ** (level_of_detail - (i + 1))) * kpc_index[_kpc[i]][0]
             loc_y += interval_y * (3 ** (level_of_detail - (i + 1))) * kpc_index[_kpc[i]][1]
         return (loc_x + interval_x / 2, loc_y + interval_y / 2)
-if __name__ == '__main__':
-    _kpc = kpc(5000, 5000)
-    print(_kpc.kpc_from_location(0, 0, 2))
-    print(_kpc.location_from_kpc(333333333))
-
